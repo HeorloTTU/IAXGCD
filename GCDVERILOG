@@ -1,8 +1,15 @@
 module GCDUnit_bhv# ( parameter W = 16) //WIDTH 
 (
+
+input clk,
+input  [W-1:0] operands_bits_A,
+input  [W-1:0] operands_bits_B,
+
+
 input [W-1:0] inA,  //INputs
 input [W-1:0] inB,  
 output [W-1:0] out //outputs
+output [W-1:0] result_bits_data
 );
 reg [W-1:0] A, B, out, swap;  //regs
 integer done;
